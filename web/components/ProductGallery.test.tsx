@@ -1,7 +1,7 @@
 import React from 'react';
 import { describe, expect, it, beforeEach, vi } from 'vitest';
 import { fireEvent, render, screen, waitFor } from '@testing-library/react';
-import ProductGallery from './ProductGallery';
+import ProductGallery from './ProductGallery.js';
 import type { ProductWithPrice } from '@repo/contracts';
 
 describe('ProductGallery', () => {

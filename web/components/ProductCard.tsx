@@ -3,7 +3,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import Image from 'next/image';
 import type { ProductWithPrice } from '@repo/contracts';
-import { formatRating, formatUsd } from '../lib/format';
+import { formatRating, formatUsd } from '../lib/format.js';
 
 const VARIANT_LABELS: Record<string, string> = {
   yellow: 'Yellow Gold',

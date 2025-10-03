@@ -2,7 +2,7 @@
 
 import React, { useEffect, useMemo, useState } from 'react';
 import type { ProductWithPrice } from '@repo/contracts';
-import ProductCard from './ProductCard';
+import ProductCard from './ProductCard.js';
 
 interface ProductGalleryProps {
   products: ProductWithPrice[];
