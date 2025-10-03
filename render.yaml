@@ -3,7 +3,7 @@ services:
     name: jewelry-catalog-api
     env: node
     plan: free
-    rootDirectory: api
+    rootDir: api
     buildCommand: |
       npm install
       npm run build
