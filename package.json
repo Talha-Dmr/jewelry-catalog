@@ -1,0 +1,28 @@
+{
+  "name": "@repo/root",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "api",
+    "web",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace @repo/web",
+    "dev:api": "npm run dev --workspace @repo/api",
+    "dev:web": "npm run dev --workspace @repo/web",
+    "build": "npm run build --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present"
+  },
+  "devDependencies": {
+    "@jridgewell/trace-mapping": "^0.3.31",
+    "@typescript-eslint/eslint-plugin": "^7.7.1",
+    "@typescript-eslint/parser": "^7.7.1",
+    "debug": "^4.3.4",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "pretty-format": "^29.7.0",
+    "typescript": "^5.5.4"
+  }
+}
