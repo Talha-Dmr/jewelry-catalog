@@ -1,5 +1,5 @@
 import { Suspense } from 'react';
-import ProductGallery from '../components/ProductGallery.js';
+import ProductGallery from '../components/ProductGallery';
 import type { ProductWithPrice } from '@repo/contracts';
 
 async function fetchProducts(): Promise<ProductWithPrice[]> {

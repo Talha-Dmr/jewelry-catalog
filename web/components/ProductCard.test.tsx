@@ -1,7 +1,7 @@
 import React from 'react';
 import { describe, expect, it } from 'vitest';
 import { render, screen } from '@testing-library/react';
-import ProductCard from './ProductCard.js';
+import ProductCard from './ProductCard';
 import type { ProductWithPrice } from '@repo/contracts';
 
 const product: ProductWithPrice = {
