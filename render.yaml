@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: jewelry-catalog-api
+    env: node
+    plan: free
+    rootDirectory: api
+    buildCommand: |
+      npm install
+      npm run build
+    startCommand: npm run start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_VERSION
+        value: "20"
+      - key: GOLD_PRICE_API_URL
+        sync: false
+      - key: GOLD_PRICE_API_KEY
+        sync: false
+      - key: GOLD_PRICE_API_HEADER
+        sync: false
+      - key: MOCK_GOLD_PRICE
+        value: "65.2"
+      - key: PORT
+        value: "4000"
