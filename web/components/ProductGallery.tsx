@@ -59,13 +59,7 @@ export default function ProductGallery({ products }: ProductGalleryProps) {
   }, [maxIndex]);
 
   const itemWidth = useMemo(() => (itemsPerView > 0 ? 100 / itemsPerView : 100), [itemsPerView]);
-  const offsetPercentage = useMemo(() => {
-    if (total === 0) {
-      return 0;
-    }
-
-    return (startIndex / total) * 100;
-  }, [startIndex, total]);
+  const offsetPercentage = useMemo(() => startIndex * itemWidth, [itemWidth, startIndex]);
 
   const legendItems = useMemo(
     () => [
@@ -106,7 +100,7 @@ export default function ProductGallery({ products }: ProductGalleryProps) {
         <div className="h-px w-16 bg-[#c6c2bd]" aria-hidden />
       </header>
 
-      <div className="relative">
+      <div className="relative min-h-[500px]">
         <button
           type="button"
           onClick={handlePrev}

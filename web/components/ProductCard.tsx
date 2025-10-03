@@ -61,14 +61,14 @@ export default function ProductCard({ product }: ProductCardProps) {
 
   return (
     <article className="flex flex-col gap-4 rounded-[32px] border border-[#ece9e6] bg-white p-6 shadow-[0_12px_24px_rgba(0,0,0,0.04)] transition hover:shadow-[0_16px_30px_rgba(0,0,0,0.08)]">
-      <div className="relative overflow-hidden rounded-[28px] bg-[#f8f7f5]">
+      <div className="relative aspect-square overflow-hidden rounded-[28px] bg-[#f8f7f5]">
         <Image
           src={activeImage}
           alt={product.name}
           width={360}
           height={360}
           loading="lazy"
-          className={`w-full object-cover transition-opacity duration-300 ${
+          className={`h-full w-full object-cover transition-opacity duration-300 ${
             isImageLoaded ? 'opacity-100' : 'opacity-0'
           }`}
           onLoad={() => setIsImageLoaded(true)}
