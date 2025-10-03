@@ -43,7 +43,8 @@ describe('ProductGallery', () => {
       const match = transform.match(/-([0-9.]+)%/);
       expect(match).not.toBeNull();
       const value = match ? Number.parseFloat(match[1]) : NaN;
-      expect(value).toBeCloseTo((1 / products.length) * 100, 2);
+      // Mobile: itemsPerView=1, so itemWidth=100%, startIndex=1 → offset=100%
+      expect(value).toBeCloseTo(100, 2);
     });
   });
 });

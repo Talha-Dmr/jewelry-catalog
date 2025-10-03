@@ -42,12 +42,10 @@ export async function getGoldPrice(): Promise<number> {
 }
 
 function readMockedPrice(): number | null {
-  const fallback = process.env.MOCK_GOLD_PRICE ?? process.env.GOLD_PRICE_FALLBACK;
-  if (fallback === undefined) {
-    return null;
-  }
+  const fallbackRaw =
+    process.env.MOCK_GOLD_PRICE ?? process.env.GOLD_PRICE_FALLBACK ?? '65.2';
 
-  const parsed = Number(fallback);
+  const parsed = Number(fallbackRaw);
   return Number.isFinite(parsed) ? parsed : null;
 }
 
