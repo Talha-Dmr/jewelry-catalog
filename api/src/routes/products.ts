@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import { ZodError, z } from 'zod';
-import { listProducts } from '../services/productService';
+import { listProducts } from '../services/productService.js';
 
 const router = Router();
 

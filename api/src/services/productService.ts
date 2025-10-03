@@ -1,13 +1,13 @@
-import { ProductListFilters, ProductWithPrice } from '@repo/contracts/product';
-import { getProducts } from '../repositories/productRepository';
-import { getGoldPrice } from './goldPriceService';
-import { calculateProductPrice, convertPopularityToRating } from '../utils/pricing';
+import type { ProductListFilters, ProductRecord, ProductWithPrice } from '@repo/contracts';
+import { getProducts } from '../repositories/productRepository.js';
+import { getGoldPrice } from './goldPriceService.js';
+import { calculateProductPrice, convertPopularityToRating } from '../utils/pricing.js';
 
 export async function listProducts(filters: ProductListFilters = {}): Promise<ProductWithPrice[]> {
-  const [products, goldPrice] = await Promise.all([
+  const [products, goldPrice] = (await Promise.all([
     getProducts(),
     getGoldPrice()
-  ]);
+  ])) as [ProductRecord[], number];
 
   const enriched = products.map((product) => ({
     ...product,

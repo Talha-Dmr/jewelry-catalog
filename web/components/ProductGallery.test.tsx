@@ -2,7 +2,7 @@ import React from 'react';
 import { describe, expect, it, beforeEach, vi } from 'vitest';
 import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import ProductGallery from './ProductGallery';
-import type { ProductWithPrice } from '@repo/contracts/product';
+import type { ProductWithPrice } from '@repo/contracts';
 
 describe('ProductGallery', () => {
   const products: ProductWithPrice[] = Array.from({ length: 3 }, (_, index) => ({

@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect, useMemo, useState } from 'react';
-import type { ProductWithPrice } from '@repo/contracts/product';
+import type { ProductWithPrice } from '@repo/contracts';
 import ProductCard from './ProductCard';
 
 interface ProductGalleryProps {

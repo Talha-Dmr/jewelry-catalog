@@ -2,7 +2,7 @@
 
 import React, { useEffect, useMemo, useState } from 'react';
 import Image from 'next/image';
-import type { ProductWithPrice } from '@repo/contracts/product';
+import type { ProductWithPrice } from '@repo/contracts';
 import { formatRating, formatUsd } from '../lib/format';
 
 const VARIANT_LABELS: Record<string, string> = {

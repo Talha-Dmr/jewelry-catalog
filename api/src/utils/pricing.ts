@@ -1,4 +1,4 @@
-import { ProductRecord } from '@repo/contracts/product';
+import type { ProductRecord } from '@repo/contracts';
 
 const POPULARITY_SCALE = 5;
 

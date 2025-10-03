@@ -1,6 +1,6 @@
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
-import { ProductRecord } from '@repo/contracts/product';
+import type { ProductRecord } from '@repo/contracts';
 
 const dataPath = path.resolve(process.cwd(), 'data/products.json');
 

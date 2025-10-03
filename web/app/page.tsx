@@ -1,6 +1,6 @@
 import { Suspense } from 'react';
 import ProductGallery from '../components/ProductGallery';
-import type { ProductWithPrice } from '@repo/contracts/product';
+import type { ProductWithPrice } from '@repo/contracts';
 
 async function fetchProducts(): Promise<ProductWithPrice[]> {
   const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL ?? 'http://localhost:4000';

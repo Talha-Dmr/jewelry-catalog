@@ -1,6 +1,6 @@
 import express, { type ErrorRequestHandler } from 'express';
 import cors from 'cors';
-import productsRouter from './routes/products';
+import productsRouter from './routes/products.js';
 
 const app = express();
 

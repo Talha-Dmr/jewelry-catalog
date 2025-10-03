@@ -1,4 +1,4 @@
-import type { ProductRecord } from '@repo/contracts/product';
+import type { ProductRecord } from '@repo/contracts';
 import { calculateProductPrice, convertPopularityToRating } from '../src/utils/pricing';
 
 describe('pricing utils', () => {
